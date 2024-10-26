@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@476&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+Grund:wght@260&display=swap');
+
+body{
+    margin: 0;
+    position: relative;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   
+video{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+h1{
+    font-size: 5vw;
+    font-weight: 200;
+    position: relative;
+    font-family:"Cormorant Infant", serif
+
+}
+.main-box,
+.main-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width:300px;
+    height:300px;
+    margin:2.5rem;
+    background-color: #ffffff24;
+    border: 1px solid #ffffff1d;
+    border-radius: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.box2{
+    width:300px;
+    height:300px;
+    margin:2.5rem;
+    background-color: #ffffff24;
+    border: 1px solid #ffffff1d;
+    border-radius: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.box:hover ::after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50px 20px;
+    background-color: #f2efef24;
+    top:0;
+    left:0;
+    z-index: -1;
+   position: absolute;
+   transform: translate(5%);
+  }
+
+.box2:hover ::after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50px 20px;
+    background-color: #f2efef24;
+    top:0;
+    left:0;
+    z-index: -1;
+   position: absolute;
+   pointer-events: none;
+   transform: translate(5%);
+  }
+p{
+    font-size: 1.5vw;
+    margin:0;
+    padding-top: 1rem;
+    font-family: "Playwrite DE Grund", cursive;
+}
+img{
+    width: 200px;
+    height: 200px;
+}   
+button{
+    border: 1px solid #faf7f739;
+    background-color: #f9f7f784;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    opacity: 0;
+    font-size: 1vw;
+    font-weight: 900;
+    color:#161616;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Playwrite DE Grund", cursive;
+    transition: all .6s ease;
+}
+.box:hover button{
+    opacity:1;
+    transform: translateY(5%);
+}

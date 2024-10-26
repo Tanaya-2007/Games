@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorOP: #20f4ffdb;
+    --winning-blocks: rgb(98 146 170);
+}
+
+body {
+    color: var(--colorOP);
+    font-family: 'Finger Paint', cursive;
+    height: 100vh;
+    /* background-color: #000; */
+}
+h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+video{
+    position: absolute;
+}
+
+.container {
+    padding: 0 40px;
+    /* height: 100vh; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#gameboard {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    user-select: none;
+}
+.box {
+    height: 250px;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorOP);
+    font-size: 10vw;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--colorOP);
+    color: #000;
+    border-color: var(--colorOP);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width:800px) {
+    h1 {
+        font-size: 10vw;
+    }
+    #gameboard{
+        width: 560px;
+    }
+    .box{
+        height: 190px;
+    }
+    .box {
+        font-size: 15vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #gameboard{
+        width: 400px;
+    }
+    .box{
+        height: 100px;
+    }
+}
+@media screen and (max-width:400px) {
+    #gameboard{
+        width: 300px;
+    }
+    .box{
+        height: 90px;
+    }
+}

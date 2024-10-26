@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game || Play Now</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+ 
+  <body>
+    <video src="../Background1.mp4" autoplay loop muted></video>
+    <section id="main">
+      <div class="main">
+        <div class="header">Rock Paper Scissors</div>
+        <div class="main-body">
+          <div class="main-player">
+            <h1>Choose Your Move :</h1>
+            <div class="main-row">
+              <div class="main-img choice" id="rock">
+                <img src="../imgs/rockPapersScissors/rock.png" alt="" />
+              </div>
+              <div class="main-img choice" id="paper">
+                <img src="../imgs/rockPapersScissors/paper.png" alt="" />
+              </div>
+              <div class="main-img choice" id="scissor">
+                <img src="../imgs/rockPapersScissors/scissor.png" alt="" />
+              </div>
+            </div>
+            <h1 class="computer-h1">Computer's Move :</h1>
+
+            <div class="main-row main-row2">
+              <div class="main-img c-choice" id="c-rock">
+                <img src="../imgs/rockPapersScissors/rock.png" alt="" />
+              </div>
+              <div class="main-img c-choice" id="c-paper">
+                <img src="../imgs/rockPapersScissors/paper.png" alt="" />
+              </div>
+              <div class="main-img c-choice" id="c-scissor">
+                <img src="../imgs/rockPapersScissors/scissor.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="main-result">
+            <h1 id="main-text"><label for="main-text"></label></h1>
+            <h1>Winner : <label for="result" id="result">None</label></h1>
+          </div>
+        </div>
+      </div>
+      <div id="table">
+        <table>
+          <thead>
+            <tr>
+              <td>Player</td>
+              <td>Computer</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="user">0</td>
+              <td id="computer">0</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="../script.js"></script>
+    <script>
+      scissor();
+    </script>
+  </body>
+</html>

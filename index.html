@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <video src="Fog.mp4" loop autoplay muted></video>
+    <h1>Log in</h1>
+
+    <div class="creds">
+      <a class="log"
+        ><h2>Username:</h2>
+        <input type="text" class="uname"
+      /></a>
+      <a class="log"
+        ><h2>Password:</h2>
+        <input type="text" class="pass"
+      /></a>
+      <a class="clear"><button>Clear</button></a>
+      <a class="btn"><button>Sign Up</button></a>
+    </div>
+    <script>
+       var uname = document.querySelector(".uname");
+       var pass = document.querySelector(".pass");
+       var btn = document.querySelector(".btn");
+
+    if(document.cookie)
+    {
+        document.querySelectorAll(".log").forEach(log=>{
+            log.style.display = "none"
+        })
+        document.querySelector(".clear").style.display = "inline-block";
+
+
+    }
+    btn.addEventListener("click" , ()=>{
+
+        if(document.cookie)
+    {
+        document.location = "Micro.html";
+    }
+    else
+    {
+    var unRex = /^\w{5,15}$/;
+    var date = new Date();
+    date.setMonth(date.getMonth() + 1);
+    if (unRex.test(uname.value) && (pass.value != "")) {
+        
+      document.cookie =
+        "username=" +
+        uname.value +
+        "; expires=" +
+        date.toUTCString() +
+        "; path=/";
+        document.location = "Micro.html";
+
+    } else if(!(unRex.test(uname.value))) {
+      alert("Username must be of 5 Characters");
+    }
+    else if(pass.value == "")
+    {
+        alert("Password not Entered");
+    }
+
+    }
+    
+})
+       
+document.querySelector(".clear").addEventListener("click" , ()=>{
+    var date = new Date();
+    date.setMonth(date.getMonth() - 1);
+    document.cookie = "username=; expires=" + date.toUTCString() + "; path=/";
+
+})
+    </script>
+  </body>
+</html>
